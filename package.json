@@ -1,8 +1,9 @@
 {
   "name": "react-simple-affix",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A simple react component that sticks to the viewport when scrolling until it reaches its relative element bottom point.",
-  "main": "lib/index.jsx",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc --project tsconfig.prod.json & webpack --env=\"mode=production\"",
     "dev": "webpack-dev-server --env=\"mode=development\""
