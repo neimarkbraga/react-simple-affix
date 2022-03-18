@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "declaration": true,
+    "jsx": "preserve"
+  },
+  "extends": "./tsconfig.json",
+  "exclude": ["src/development"]
+}

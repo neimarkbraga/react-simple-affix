@@ -1,0 +1,57 @@
+{
+  "name": "react-simple-affix",
+  "version": "1.0.0",
+  "description": "A simple react component that sticks to the viewport when scrolling until it reaches its relative element bottom point.",
+  "main": "lib/index.jsx",
+  "scripts": {
+    "build": "tsc --project tsconfig.prod.json & webpack --env=\"mode=production\"",
+    "dev": "webpack-dev-server --env=\"mode=development\""
+  },
+  "keywords": [
+    "affix",
+    "sticky",
+    "component"
+  ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/"
+  ],
+  "author": "Makoy",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/preset-react": "^7.16.7",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.7.1",
+    "lorem-ipsum": "^2.0.4",
+    "postcss": "^8.4.12",
+    "postcss-loader": "^6.2.1",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^3.0.23",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.2",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neimarkbraga/react-simple-affix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neimarkbraga/react-simple-affix/issues"
+  },
+  "homepage": "https://github.com/neimarkbraga/react-simple-affix#readme"
+}
