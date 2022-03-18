@@ -1,4 +1,8 @@
-## React Affix
+# React Affix
+
+[![GitHub issues](https://img.shields.io/github/issues/neimarkbraga/react-simple-affix)](https://github.com/neimarkbraga/react-simple-affix/issues)
+[![GitHub license](https://img.shields.io/github/license/neimarkbraga/react-simple-affix)](https://github.com/neimarkbraga/react-simple-affix/blob/main/LICENSE)
+
 React Affix is a component that sticks to the viewport when scrolling until it reaches its relative element bottom point.
 
 ### Installation
@@ -18,6 +22,10 @@ React Affix is a component that sticks to the viewport when scrolling until it r
 </Affix>
 ```
 
+### Demo
+- [Webpage with affix](https://neimarkbraga.github.io/react-simple-affix/demo.html)
+- [Code sample - codesandbox.io](https://codesandbox.io/s/react-simple-affix-demo-me265w?file=/src/App.js)
+
 ### Props
 | Name | Required | Type | Description |
 |------|----------|------|-------------|
@@ -34,4 +42,3 @@ Relative element's height serves as the reference of affix to determine when it 
 
 _Example_: if you have a **main** and **side** div, you can make the **main** div as the relative element...     
 with this setup, affix would follow the height of **main** and will stop floating if the end of **main** div is reached
-
