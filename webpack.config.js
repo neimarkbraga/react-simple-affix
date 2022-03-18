@@ -9,7 +9,7 @@ module.exports = (env) => {
     entry: './src/development/index.tsx',
     output: {
       filename: 'affix.js',
-      path: path.resolve(__dirname, 'public')
+      path: path.resolve(__dirname, 'docs')
     },
     module: {
       rules: [
@@ -52,7 +52,7 @@ module.exports = (env) => {
       compress: true,
       watchFiles: ['src/**/*'],
       static: {
-        directory: path.join(process.cwd(), 'public'),
+        directory: path.join(process.cwd(), 'docs'),
         serveIndex: true
       }
     }
