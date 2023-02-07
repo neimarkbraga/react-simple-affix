@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "lib",
-    "declaration": true
+    "declaration": true,
+    "sourceMap": false
   },
   "extends": "./tsconfig.json",
   "exclude": ["src/development"]
