@@ -49,7 +49,7 @@ const Affix = (props: AffixProps) => {
   const [affixStyle, setAffixStyle] = useState<CSSProperties>({});
   const rootRef = useRef<HTMLDivElement>(null);
   const affixRef = useRef<HTMLDivElement>(null);
-  const prevWindowScrollYRef = useRef<number>(window.scrollY);
+  const prevWindowScrollYRef = useRef<number>(window?.scrollY ?? 0);
 
   const queryElement = (selector: string): HTMLElement | null => {
     if (selector)
@@ -68,6 +68,7 @@ const Affix = (props: AffixProps) => {
     const navbar = queryElement(fixedNavbarSelector);
     const footer = queryElement(fixedFooterSelector);
 
+    if (typeof window === 'undefined') return _style;
     if (!rootRef.current) return _style;
     if (!affixRef.current) return _style;
     if (!relative) return _style;
@@ -132,6 +133,7 @@ const Affix = (props: AffixProps) => {
   };
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     if (!enabled) return;
 
     const scrollHandler = () => {
