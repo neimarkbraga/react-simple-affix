@@ -51,6 +51,8 @@ const Affix = (props: AffixProps) => {
   const affixRef = useRef<HTMLDivElement>(null);
   const prevWindowScrollYRef = useRef<number>(window?.scrollY ?? 0);
 
+  const rootElement = rootRef.current;
+
   const queryElement = (selector: string): HTMLElement | null => {
     if (selector)
       return document.querySelector<HTMLElement>(selector);
@@ -158,6 +160,26 @@ const Affix = (props: AffixProps) => {
     bottomOffset,
     inheritParentWidth
   ]);
+
+
+  useEffect(() => {
+    if (rootElement && ResizeObserver && inheritParentWidth) {
+      let width: number | null = null;
+
+      const observer = new ResizeObserver(() => {
+        if (width !== null && width !== rootElement.clientWidth) {
+          setAffixStyle(computeStyle());
+          prevWindowScrollYRef.current = window.scrollY;
+        }
+        width = rootElement.clientWidth
+      });
+
+      observer.observe(rootElement);
+      return () => observer.disconnect();
+    }
+
+    return () => {};
+  }, [rootElement]);
 
   return (
     <div ref={rootRef} style={{ width: '100%' }}>
